@@ -1,0 +1,36 @@
+body{
+    background-color: #F3F0EB !important;
+}
+
+h1, h3{
+    font-family: JejuMyeongjo;
+    color: #1C4E59;
+}
+
+label{
+    font-size: 18px !important;
+    font-family: JejuMyeongjo;
+    color: #277373 !important;
+}
+
+.cadastro{
+    margin: 60px 200px 60px 200px !important;
+}
+
+.botao-cadcli{
+    width: 200px !important;
+    background-color: #1C4E59 !important;
+    border-color: #1C4E59 !important;
+}
+
+.input-cadcli{
+    background-color: #C1D2D9 !important;
+    border-color: #277373 !important;
+    border-width: 2px !important;
+    margin-bottom: 20px;
+}
+
+hr{
+    color: #277373 !important;
+    border-width: 3px !important;
+}
