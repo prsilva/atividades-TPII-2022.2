@@ -4,24 +4,26 @@ import Cliente from "../modelos/cliente";
 import Endereco from "../modelos/endereco";
 import CadastrarDocumentosCliente from "./cadastroDocumentosCliente";
 
-export default class CadastroClienteDependente extends Processo{
+export default class CadastroClienteDependente extends Processo {
     private clientes: Cliente[];
-    constructor(){
+    constructor() {
         super();
         this.clientes = Armazem.InstanciaUnica.Clientes;
     }
 
-    processar(): void{
-        var processo = false 
-        let responsavel = this.entrada.receberTexto('Digite o número do documento do cliente responsável: ')
-        
-        for (let index = 0; index < this.clientes.length; index ++){
+    processar(): void {
+        var processo = false
+        let responsavel = this.entrada.receberTexto('| Insira o número do documento do cliente responsável: ')
+
+        console.log('Iniciando o cadastro de um novo cliente dependente...')
+
+        for (let index = 0; index < this.clientes.length; index++) {
             for (let indexDoc = 0; indexDoc < this.clientes[index].Documentos.length; indexDoc++) {
                 if (responsavel == this.clientes[index].Documentos[indexDoc].Numero) {
                     processo = true
-                    let nome = this.entrada.receberTexto('| Nome do novo cliente dependente: ')
-                    let nomeSocial = this.entrada.receberTexto('| Nome social do novo cliente dependente: ')
-                    let dataNascimento = this.entrada.receberData('| Data de nascimento: ')
+                    let nome = this.entrada.receberTexto('| Qual o nome do novo cliente dependente?')
+                    let nomeSocial = this.entrada.receberTexto('| Qual o nome social do novo cliente dependente?')
+                    let dataNascimento = this.entrada.receberData('| Qual a data de nascimento?')
 
                     let dependente = new Cliente(nome, nomeSocial, dataNascimento)
 
