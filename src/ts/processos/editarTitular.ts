@@ -5,6 +5,7 @@ import Cliente from "../modelos/cliente";
 import Documento from "../modelos/documento";
 import Endereco from "../modelos/endereco";
 import Telefone from "../modelos/telefone";
+import CadastrarAcomodacaoCliente from "./cadastroAcomodacaoCliente";
 
 export default class EditarClienteTitular extends Processo {
     private clientes: Cliente[]
@@ -79,6 +80,9 @@ export default class EditarClienteTitular extends Processo {
                                 }
                             }
                             break;
+                        case 6: 
+                            this.processo = new CadastrarAcomodacaoCliente(this.clientes[index])
+                            this.processo.processar()
                         case 0:
                             console.log("Até mais!");
                             break;

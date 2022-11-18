@@ -1,6 +1,6 @@
 import Processo from "../abstracoes/processo";
 import Armazem from "../dominio/armazem";
-import MenuEditarClienteDependente from "../menus/menuEditarDependente";
+import MenuEditarClienteDependente from "../menus/menueditarDependente";
 import Cliente from "../modelos/cliente";
 import Documento from "../modelos/documento";
 

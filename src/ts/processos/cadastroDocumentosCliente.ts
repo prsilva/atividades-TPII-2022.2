@@ -2,6 +2,7 @@ import Processo from "../abstracoes/processo";
 import MenuTipoDocumento from "../menus/menuTipoDocumento";
 import Cliente from "../modelos/cliente";
 import CadastroCPF from "./cadastroCPF";
+import CadastroPassaporte from "./cadastroPassaporte";
 import CadastroRg from "./cadastroRg";
 
 export default class CadastrarDocumentosCliente extends Processo {
@@ -28,7 +29,7 @@ export default class CadastrarDocumentosCliente extends Processo {
                     this.processo.processar()
                     break
                 case 3:
-                    this.processo = new CadastroRg(this.cliente)
+                    this.processo = new CadastroPassaporte(this.cliente)
                     this.processo.processar()
                     break
                 case 0:
